@@ -1,11 +1,12 @@
 body {
   background-color: #f7f7f7;
-  font-family: "Sen", sans-serif;
+  font-family: 'Sen', sans-serif;
+  height: 100vh;
 }
 
 main {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   height: 100vh;
   align-items: center;
   justify-items: center;
@@ -13,9 +14,46 @@ main {
 
 .WelcomeHeadline {
   font-size: 40px;
-  padding-bottom: 100px;
+  padding: 40px;
+  margin: 0;
 }
 
-.profilePicture {
-  height: 200px;
+@media (min-width: 600px) {
+  .WelcomeHeadline {
+    padding-bottom: 120px;
+  }
+}
+
+.Name {
+  margin: 20px 0 5px 0;
+}
+
+.WorkTitle {
+  font-size: 26px;
+  margin: 2px;
+}
+
+.ProfilePicture {
+  height: 150px;
+}
+
+.Profile {
+  display: grid;
+  justify-items: center;
+  padding: 40px;
+}
+
+@media (min-width: 600px) {
+  .Profile {
+    padding-bottom: 120px;
+  }
+}
+
+.IconContainer {
+  margin-top: 10px;
+}
+
+.Icon {
+  height: 24px;
+  padding-right: 10px;
 }
