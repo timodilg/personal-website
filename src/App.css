@@ -1,59 +1,35 @@
 body {
   background-color: #f7f7f7;
   font-family: 'Sen', sans-serif;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
-main {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  height: 100vh;
-  align-items: center;
-  justify-items: center;
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 100px 0 0;
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: none;
 }
 
-.WelcomeHeadline {
-  font-size: 40px;
-  padding: 40px;
-  margin: 0;
-}
-
-@media (min-width: 600px) {
-  .WelcomeHeadline {
-    padding-bottom: 120px;
+@media (max-width: 600px) {
+  ul {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
   }
 }
 
-.Name {
-  margin: 20px 0 5px 0;
+li {
+  display: inline;
+  padding: 5px;
+  margin: 10px;
+  font-size: 18px;
+  text-decoration: none;
 }
 
-.WorkTitle {
-  font-size: 26px;
-  margin: 2px;
-}
-
-.ProfilePicture {
-  height: 150px;
-}
-
-.Profile {
-  display: grid;
-  justify-items: center;
-  padding: 40px;
-}
-
-@media (min-width: 600px) {
-  .Profile {
-    padding-bottom: 120px;
-  }
-}
-
-.IconContainer {
-  margin-top: 10px;
-}
-
-.Icon {
-  height: 24px;
-  padding-right: 10px;
+li a:hover {
+  cursor: pointer;
+  background: #03fcca;
 }

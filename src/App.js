@@ -1,40 +1,40 @@
 import React from 'react'
 import './App.css'
-import profilePicture from './images/timo-profile-700px.png'
-import Github from './images/github.png'
-import Linkedin from './images/linkedin.png'
-import Xing from './images/xing.svg'
-import Mail from './images/mail.png'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import Home from './pages/Home'
+import About from './pages/About'
+import Projects from './pages/Projects'
 
-function App() {
+export default function App() {
   return (
-    <main>
-      <div className="Profile">
-        <img src={profilePicture} alt="timo dilg" className="ProfilePicture" />
-        <h1 className="Name">Timo Dilg</h1>
-        <p className="WorkTitle">Frontend Developer</p>
-        <div className="IconContainer">
-          <a href="https://github.com/timodilg">
-            <img src={Github} alt="github logo" className="Icon" />
-          </a>
-          <a href="https://www.linkedin.com/in/timo-dilg/">
-            <img src={Linkedin} alt="linkedin logo" className="Icon" />
-          </a>
-          <a href="https://www.xing.com/profile/Timo_Dilg/cv">
-            <img src={Xing} alt="xing logo" className="Icon" />
-          </a>
-          <a href="mailto:timo_dilg@yahoo.de">
-            <img src={Mail} alt="mail logo" className="Icon" />
-          </a>
-        </div>
-      </div>
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/projects">Projects</Link>
+            </li>
+          </ul>
+        </nav>
 
-      <p className="WelcomeHeadline">
-        Hi, my name is Timo. I am a Frontend Developer living in Hamburg,
-        Germany.
-      </p>
-    </main>
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/projects">
+            <Projects />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   )
 }
-
-export default App
