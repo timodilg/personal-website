@@ -9,11 +9,13 @@ export default function About() {
         My name is Timo, 28 years old and I just finished the coding bootcamp
         neuefische. My digital journeyman’s piece is a time management mobile
         app which helps you to work more focussed. It is build with the React
-        framework. Here you can see it live.
+        framework.{' '}
+        <a href="https://pomodoro-23add.firebaseapp.com/todo">Here</a> you can
+        see it live.
       </p>
       <p>
-        During the neuefische bootcamp I learned a lot about the following
-        technologies and tools:
+        During the <a href="https://www.neuefische.de/">neuefische</a> bootcamp
+        I learned a lot about the following technologies and tools:
       </p>
       <p>
         JavaScript ES2020, React latest, HTML5, CSS3, Bootstrap, Storybook,
@@ -29,6 +31,6 @@ export default function About() {
 }
 
 const AboutStyled = styled.div`
-  margin: 40px 350px;
+  margin: 40px 15%;
   font-size: 18px;
 `
