@@ -20,19 +20,6 @@ export default function Projects() {
           </div>
         </ProjectCard>
       </a>
-
-      <ProjectCard>
-        <img src={timer} alt="ich" />
-        <div>
-          <h3>Pomodoro - Time Management Mobile App</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Dignissimos consequatur minima, veritatis odit blanditiis nemo
-            temporibus perferendis, quibusdam eaque tempora ad tenetur dolor
-            nisi dolorum amet quasi? Rerum, assumenda. Deleniti!
-          </p>
-        </div>
-      </ProjectCard>
     </ProjectsStyled>
   )
 }
@@ -55,7 +42,6 @@ const ProjectCard = styled.div`
   grid-template-columns: 30% 70%;
   justify-items: center;
   align-items: center;
-  min-width: 200px;
   padding: 15px 15px 15px 0;
   font-size: 16px;
   background: white;
