@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components/macro'
-import profilePicture from '../images/timo-profile-700px.png'
+import timer from '../images/timer.svg'
 
 export default function Projects() {
   return (
@@ -9,7 +9,7 @@ export default function Projects() {
 
       <a href="https://pomodoro-23add.firebaseapp.com/todo">
         <ProjectCard>
-          <img src={profilePicture} alt="ich" />
+          <img src={timer} alt="timer" />
           <div>
             <h3>Pomodoro - Time Management Mobile App</h3>
             <p>
@@ -22,7 +22,7 @@ export default function Projects() {
       </a>
 
       <ProjectCard>
-        <img src={profilePicture} alt="ich" />
+        <img src={timer} alt="ich" />
         <div>
           <h3>Pomodoro - Time Management Mobile App</h3>
           <p>
@@ -56,7 +56,7 @@ const ProjectCard = styled.div`
   justify-items: center;
   align-items: center;
   min-width: 200px;
-  padding: 15px;
+  padding: 15px 15px 15px 0;
   font-size: 16px;
   background: white;
   margin-top: 20px;
@@ -65,6 +65,7 @@ const ProjectCard = styled.div`
   @media (max-width: 600px) {
     display: grid;
     grid-template-columns: 100%;
+    padding: 15px;
   }
 
   :hover {
@@ -72,6 +73,9 @@ const ProjectCard = styled.div`
   }
 
   img {
-    width: 100px;
+    width: 70px;
+    background: #111;
+    padding: 15px;
+    border-radius: 25px;
   }
 `
