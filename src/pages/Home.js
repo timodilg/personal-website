@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components/macro'
-import profilePicture from '../images/timo-profile-700px.png'
+import profilePicture from '../images/timo.webp'
 import Github from '../images/github.png'
 import Linkedin from '../images/linkedin.png'
 import Xing from '../images/xing.svg'
