@@ -1,13 +1,35 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 import timer from '../images/timer.svg'
+import calculator from '../images/calculator.svg'
 
 export default function Projects() {
   return (
     <ProjectsStyled>
       <h2>Projects</h2>
 
-      <a href="https://pomodoro-23add.firebaseapp.com/todo">
+      <a
+        href="https://gebuehrenrechner.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <ProjectCard>
+          <img src={calculator} alt="calculator" />
+          <div>
+            <h3>gebuehrenrechner.com - PayPal Fee Calculator</h3>
+            <p>
+              Simple calculator for PayPal fees build with React. More features
+              coming soon.
+            </p>
+          </div>
+        </ProjectCard>
+      </a>
+
+      <a
+        href="https://pomodoro-23add.firebaseapp.com/todo"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <ProjectCard>
           <img src={timer} alt="timer" />
           <div>
@@ -63,5 +85,13 @@ const ProjectCard = styled.div`
     background: #111;
     padding: 15px;
     border-radius: 25px;
+  }
+
+  div {
+    justify-self: left;
+
+    @media (max-width: 600px) {
+      justify-self: center;
+    }
   }
 `
